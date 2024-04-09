@@ -12,11 +12,9 @@ import {
 } from '@expo-google-fonts/inter'
 import { ThemeProvider } from '@shopify/restyle'
 import { StatusBar } from 'expo-status-bar'
-import { View } from 'react-native'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-import { Box } from './src/components/Box/Box'
-import { Button } from './src/components/Button/Button'
-import { Text } from './src/components/Text/Text'
+import { LoginScreen } from './src/screens/auth/LoginScreen/LoginScreen'
 import { theme } from './src/theme'
 
 export default function App() {
@@ -37,25 +35,11 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#fff',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
-        <Text preset="paragraphMedium" bold mb="s8">
-          TudoBet - PWA
-        </Text>
-
-        <Box flexDirection="row" gap="s8">
-          <Button title="Fazer login" />
-          <Button title="Criar cadastro" preset="outline" />
-        </Box>
-      </View>
-    </ThemeProvider>
+        <LoginScreen />
+      </ThemeProvider>
+    </SafeAreaProvider>
   )
 }
