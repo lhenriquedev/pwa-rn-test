@@ -14,6 +14,8 @@ import { ThemeProvider } from '@shopify/restyle'
 import { StatusBar } from 'expo-status-bar'
 import { View } from 'react-native'
 
+import { Box } from './src/components/Box/Box'
+import { Button } from './src/components/Button/Button'
 import { Text } from './src/components/Text/Text'
 import { theme } from './src/theme'
 
@@ -45,9 +47,14 @@ export default function App() {
         }}
       >
         <StatusBar style="auto" />
-        <Text preset="paragraphMedium" bold>
-          Open up App.tsx to start working on your app!
+        <Text preset="paragraphMedium" bold mb="s8">
+          TudoBet - PWA
         </Text>
+
+        <Box flexDirection="row" gap="s8">
+          <Button title="Fazer login" />
+          <Button title="Criar cadastro" preset="outline" />
+        </Box>
       </View>
     </ThemeProvider>
   )
