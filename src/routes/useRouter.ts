@@ -1,4 +1,4 @@
-export type Stacks = 'Loading' | 'Auth' | 'App' | 'Onboarding'
+export type Stacks = 'Loading' | 'Auth' | 'App'
 
 export function useRouter(): Stacks {
   // const showOnboarding = useShowOnboarding()

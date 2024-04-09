@@ -7,10 +7,10 @@ import { Text } from '../../../components/Text/Text'
 export function LoginScreen() {
   return (
     <Screen bg="backgroundColor" flex={1}>
-      <Text marginBottom="s8" preset="headingLarge">
+      <Text marginBottom="s8" preset="headingLarge" color="grayWhite">
         Olá
       </Text>
-      <Text preset="paragraphLarge" mb="s40">
+      <Text preset="paragraphLarge" mb="s40" color="grayWhite">
         Digite seu e-mail e senha para entrar
       </Text>
 

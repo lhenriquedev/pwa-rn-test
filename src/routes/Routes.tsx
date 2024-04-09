@@ -6,7 +6,6 @@ import { Box } from '../components/Box/Box'
 
 import { AppStack } from './AppStack'
 import { AuthStack } from './AuthStack'
-import { OnboardingStack } from './OnboardingStack'
 import { Stacks, useRouter } from './useRouter'
 
 function LoadingScreen() {
@@ -26,7 +25,7 @@ const stacks: Record<Stacks, React.ReactElement> = {
   Loading: <LoadingScreen />,
   Auth: <AuthStack />,
   App: <AppStack />,
-  Onboarding: <OnboardingStack />,
+  // Onboarding: <OnboardingStack />,
 }
 
 export function Router() {
