@@ -25,7 +25,6 @@ const stacks: Record<Stacks, React.ReactElement> = {
   Loading: <LoadingScreen />,
   Auth: <AuthStack />,
   App: <AppStack />,
-  // Onboarding: <OnboardingStack />,
 }
 
 export function Router() {
