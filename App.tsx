@@ -37,7 +37,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <ThemeProvider theme={theme}>
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
         <Router />
       </ThemeProvider>
     </SafeAreaProvider>
