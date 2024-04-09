@@ -14,7 +14,8 @@ import { ThemeProvider } from '@shopify/restyle'
 import { StatusBar } from 'expo-status-bar'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-import { LoginScreen } from './src/screens/auth/LoginScreen/LoginScreen'
+// import { LoginScreen } from './src/screens/auth/LoginScreen/LoginScreen'
+import { OnboardScreen } from './src/screens/auth/OnboardScreen/OnboardScreen'
 import { theme } from './src/theme'
 
 export default function App() {
@@ -38,7 +39,7 @@ export default function App() {
     <SafeAreaProvider>
       <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
-        <LoginScreen />
+        <OnboardScreen />
       </ThemeProvider>
     </SafeAreaProvider>
   )

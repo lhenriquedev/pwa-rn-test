@@ -14,7 +14,7 @@ export function LoginScreen() {
   // }
 
   return (
-    <Screen scrollable>
+    <Screen scrollable canGoBack>
       <Text marginBottom="s8" preset="headingLarge">
         Olá
       </Text>
