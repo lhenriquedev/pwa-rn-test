@@ -1,7 +1,7 @@
 export const palette = {
-  greenPrimary: '#074C4E',
+  greenPrimary: '#01C46A',
   greenPrimaryLight: '#EAF6F6',
-  carrotSecondary: '#F86F2D',
+  carrotSecondary: '#F79009',
   carrotSecondaryLight: '#FAE6DD',
   greenSuccess: '#4ABC86',
   greenSuccessLight: '#D8FFEC',
@@ -17,6 +17,8 @@ export const palette = {
   gray5: '#F5F5F5',
   grayWhite: '#FFFFFF',
   white70: 'rgba(255,255,255,0.7)',
+
+  backgroundColor: '#0C111D',
 }
 
 const lightTheme = {
