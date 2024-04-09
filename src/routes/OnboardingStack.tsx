@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 
-import { OnboardingScreen } from '../screens/onboarding/OnboardingScreen/OnboardingScreen'
+import { OnboardScreen } from '../screens/auth/OnboardScreen/OnboardScreen'
 
 export type OnboardingStackParamList = {
   OnboardingScreen: undefined
@@ -17,7 +17,7 @@ export function OnboardingStack() {
         fullScreenGestureEnabled: true,
       }}
     >
-      <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
+      <Stack.Screen name="OnboardingScreen" component={OnboardScreen} />
     </Stack.Navigator>
   )
 }
