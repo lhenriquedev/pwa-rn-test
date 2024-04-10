@@ -30,9 +30,7 @@ export function OnboardScreen() {
     return <OnboardPage pageItem={item} />
   }
 
-  const updateCurrentIndex = (
-    event: NativeSyntheticEvent<NativeScrollEvent>,
-  ) => {
+  function updateCurrentIndex(event: NativeSyntheticEvent<NativeScrollEvent>) {
     const contentOffsetX = event.nativeEvent.contentOffset.x
     const currentIndex = Math.round(contentOffsetX / SCREEN_WIDTH)
 
