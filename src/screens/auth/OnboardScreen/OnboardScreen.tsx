@@ -39,8 +39,6 @@ export function OnboardScreen() {
     setCurrentSlideIndex(currentIndex)
   }
 
-  console.log(currentSlideIndex)
-
   return (
     <Box flex={1} bg="backgroundColor" paddingVertical="s32">
       <Box flex={1} justifyContent="center">
