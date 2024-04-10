@@ -1,4 +1,11 @@
-import { FlatList, ListRenderItemInfo } from 'react-native'
+import { useState } from 'react'
+import {
+  Dimensions,
+  FlatList,
+  ListRenderItemInfo,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+} from 'react-native'
 
 import { Box } from '../../../components/Box/Box'
 import { Button } from '../../../components/Button/Button'
@@ -14,16 +21,32 @@ export type OnboardPageItem = {
   alt: string
 }
 
+const SCREEN_WIDTH = Dimensions.get('screen').width
+
 export function OnboardScreen() {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+
   function renderItem({ item }: ListRenderItemInfo<OnboardPageItem>) {
     return <OnboardPage pageItem={item} />
   }
+
+  const updateCurrentIndex = (
+    event: NativeSyntheticEvent<NativeScrollEvent>,
+  ) => {
+    const contentOffsetX = event.nativeEvent.contentOffset.x
+    const currentIndex = Math.round(contentOffsetX / SCREEN_WIDTH)
+
+    setCurrentSlideIndex(currentIndex)
+  }
+
+  console.log(currentSlideIndex)
 
   return (
     <Box flex={1} bg="backgroundColor" paddingVertical="s32">
       <Box flex={1} justifyContent="center">
         <FlatList
           data={onboardingSlides}
+          onMomentumScrollEnd={updateCurrentIndex}
           pagingEnabled
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -43,7 +66,9 @@ export function OnboardScreen() {
               width={8}
               height={8}
               borderRadius="s12"
-              backgroundColor={index === 0 ? 'primary' : 'gray2'}
+              backgroundColor={
+                currentSlideIndex === index ? 'primary' : 'gray2'
+              }
             />
           ))}
         </Box>
