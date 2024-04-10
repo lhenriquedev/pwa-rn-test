@@ -43,8 +43,8 @@ export function OnboardScreen() {
     <Box flex={1} bg="backgroundColor" paddingVertical="s32">
       <Box flex={1} justifyContent="center">
         <FlatList
+          onScroll={updateCurrentIndex}
           data={onboardingSlides}
-          onMomentumScrollEnd={updateCurrentIndex}
           pagingEnabled
           horizontal
           showsHorizontalScrollIndicator={false}
