@@ -11,12 +11,14 @@ import { AppTabBar } from './AppTabBar'
 export type AppTabBottomTabParamList = {
   HomeScreen: undefined
 }
+
 const Tab = createBottomTabNavigator<AppTabBottomTabParamList>()
 
 export function AppTabNavigator() {
   function renderTabBar(props: BottomTabBarProps) {
     return <AppTabBar {...props} />
   }
+
   return (
     <Tab.Navigator
       tabBar={renderTabBar}

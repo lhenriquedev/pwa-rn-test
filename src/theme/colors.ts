@@ -15,6 +15,9 @@ export const palette = {
   gray3: '#B3B3B3',
   gray4: '#E1E1E1',
   gray5: '#F5F5F5',
+  gray6: '#F5F5F6',
+  gray7: '#94969c',
+  gray8: '#333741',
   grayWhite: '#FFFFFF',
   white70: 'rgba(255,255,255,0.7)',
 
