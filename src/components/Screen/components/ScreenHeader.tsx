@@ -50,7 +50,11 @@ export function ScreenHeader({
 
       {HeaderComponent}
 
-      {title && <Text preset="headingSmall">{title}</Text>}
+      {title && (
+        <Text preset="headingSmall" color="white70">
+          {title}
+        </Text>
+      )}
       {title && <Box backgroundColor="carrotSecondary" width={ICON_SIZE} />}
     </Box>
   )
