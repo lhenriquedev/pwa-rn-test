@@ -2,11 +2,14 @@ import { useState } from 'react'
 import {
   Dimensions,
   FlatList,
+  Image,
   ListRenderItemInfo,
   NativeScrollEvent,
   NativeSyntheticEvent,
 } from 'react-native'
 
+import BackgroundPattern from '../../../assets/images/backgroundPattern.png'
+import Logo from '../../../assets/images/logo.png'
 import { Box } from '../../../components/Box/Box'
 import { Button } from '../../../components/Button/Button'
 import { onboardingSlides } from '../../../data/onboarding-data'
@@ -38,7 +41,18 @@ export function OnboardScreen() {
   }
 
   return (
-    <Box flex={1} bg="backgroundColor" paddingVertical="s32">
+    <Box flex={1} bg="backgroundColor">
+      <Image
+        source={BackgroundPattern}
+        alt="Desenhos de linhas"
+        resizeMode="contain"
+        style={{ position: 'absolute' }}
+      />
+
+      <Box alignItems="center" bg="carrotSecondary">
+        <Image source={Logo} height={64} alt="Logo do tudobet" />
+      </Box>
+
       <Box flex={1} justifyContent="center">
         <FlatList
           onScroll={updateCurrentIndex}
